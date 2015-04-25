@@ -70,7 +70,10 @@ RUN unzip "$CLOXP_VERSION.zip"; \
 
 WORKDIR /home/cloxp/LivelyKernel
 
-EXPOSE 10080 10082 10083 10083 10084 10085 10086 10087 10088 10089
+EXPOSE 9001 9002 9003 9004 9005 7888 7889 7890 7891 7892
 
 CMD rm *.pid; \
-  forever bin/lk-server.js -p 10080 --host 0.0.0.0 --db-config '{"enableRewriting":false}'
+  forever bin/lk-server.js \
+    -p 9001 \
+    --host 0.0.0.0 \
+    --db-config '{"enableRewriting":false}'
