@@ -21,3 +21,8 @@ Since boot2docker sets up an additional VM for running docker itself you will ne
 ```sh
 VBoxManage controlvm "boot2docker-vm" natpf1 "cloxp-tcp-web-port,tcp,,9001,,9001";
 ```
+
+
+<!--
+mkdir -p m2; docker run -v $PWD/m2:/home/cloxp/.m2 -p 9001:9001 -i -t cloxp
+-->
